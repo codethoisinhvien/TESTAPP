@@ -11,7 +11,7 @@
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "ng build --prod && ng run TESTAPP:server:production"
+    "build:client-and-server-bundles": "ng build  && ng run TESTAPP:server:production"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +29,8 @@
     "@angular/router": "~7.2.0",
     "@nguniversal/express-engine": "0.0.0",
     "@nguniversal/module-map-ngfactory-loader": "0.0.0",
+    "@types/body-parser": "^1.17.0",
+    "@types/mongoose": "^5.3.19",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
