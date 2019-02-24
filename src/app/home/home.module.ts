@@ -6,10 +6,11 @@ import{HomeComponent} from './home.component'
 import {FooterComponent} from './footer/footer.component'
 import {NavComponent} from './nav/nav.component'
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule }    from '@angular/common/http';
 import { from } from 'rxjs';
 import { FormloginComponent } from './formlogin/formlogin.component';
 import { RegisterComponent } from './register/register.component';
+import {AuthService } from '../auth/auth.service'
 @NgModule({
   declarations: [
     HomeComponent,
@@ -21,8 +22,10 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FormsModule 
+    FormsModule ,
+    HttpClientModule
   ],
+ 
   exports:[FooterComponent]
 })
 export class HomeModule { }

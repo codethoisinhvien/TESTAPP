@@ -1,16 +1,21 @@
-<div class="container">
-  <form #f="ngForm" (ngSubmit)="onSubmit()">
+<div class="container" >
+  <div class='mx-auto col-md-4 col-10 bg-white p-5'>
+    <div class="row">
+      <form #f="ngForm" (ngSubmit)="onSubmit()" class='rounded-top border-primary'>
 
-    <div class="form-group">
-      <label for="nameInput">Usename</label>
-      <input type="text" class="form-control" id="nameInput" placeholder="Enter your name here" name="username" [(ngModel)]="postdata.usename">
-    </div>
-    <div class="form-group">
-      <label for="passwordInput">Password</label>
-      <input type="password" class="form-control" id="passwordInput" placeholder="Enter your password here" name="password" [(ngModel)]="postdata.password">
-    </div>
+        <div class="form-group">
+          <label for="nameInput">Usename</label>
+          <input type="text" class="form-control " id="nameInput" placeholder="Enter your name here" name="username"
+            [(ngModel)]="postdata.usename" size="100">
+        </div>
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <input type="password" class="form-control" id="passwordInput" placeholder="Enter your password here" name="password"
+            [(ngModel)]="postdata.password">
+        </div>
 
-    <button type="submit" class="btn btn-primary">Login</button>
-  </form>
-  
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </div>
 </div>

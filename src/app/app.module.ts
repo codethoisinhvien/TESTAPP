@@ -14,13 +14,15 @@ import {FeedbackComponent} from './feedback/feedback.component'
 import { ResulttestComponent } from './resulttest/resulttest.component';
 import { TestComponent } from './test/test.component';
 import { VerifyComponent } from './verify/verify.component';
+
+import { AuthService } from './auth/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
     FeedbackComponent,
     ResulttestComponent,
     TestComponent,
-    VerifyComponent
+    VerifyComponent,
     
     
   ],
@@ -31,7 +33,8 @@ import { VerifyComponent } from './verify/verify.component';
     HttpClientModule,
     BrowserAnimationsModule,
     HomeModule,
-    DashboardModule 
+    DashboardModule ,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import{Data} from './Data';
 import { HttpClientModule }    from '@angular/common/http';
-import { Http } from '@angular/http';
+
 import { httpFactory } from '@angular/platform-server/src/http';
 import { HttpClient,HttpHeaders}    from '@angular/common/http';
+import { Router } from '@angular/router';
+import { AuthService } from '../../auth/auth.service';
+
 
 @Component({
   selector: 'app-formlogin',
   templateUrl: './formlogin.component.html',
-  styleUrls: ['./formlogin.component.css']
+  styleUrls: ['./formlogin.component.css'],
+ 
 })
 
 export class FormloginComponent implements OnInit {
@@ -17,19 +21,15 @@ export class FormloginComponent implements OnInit {
     password: ""
     };
    
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient,private auth :AuthService) { 
   
   }
   
   ngOnInit() {
   }
   onSubmit() { 
-   const  headers = new HttpHeaders({'Content-Type': 'application/json'});
-
-   this.http.post("/login",JSON.stringify(this.postdata),{headers:headers}).subscribe(res=>{
-    console.log(res);
-    localStorage.setItem('token',JSON.stringify(res));
-    console.log(JSON.stringify(localStorage.getItem('token')))
-   })
+  
+ this.auth.login(this.postdata);
+   
   }
 }
