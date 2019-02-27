@@ -1,4 +1,4 @@
-# Chỉ chạy sever
+# Chỉ chạy server
  npm run compile:server && npm run serve:ssr
 # Chỉ chạy client 
  npm start
