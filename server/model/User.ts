@@ -16,17 +16,19 @@ const UserSchema: mongoose.Schema  = new mongoose.Schema({
   password:String,
   active: Boolean,
   access:Number,
-  token: String
+  token: String,
+
  
 });
 UserSchema.pre<IUser &  Document>('save', function(next) {
   // chua ma hoa pass
-  UserModel.findOne({usename : this.usename}, 'usename', (err, results)=>{
+
+  mongoose.model('User',UserSchema).findOne({usename : this.usename}, 'usename', (err, results)=>{
     if(err) {
         next(err);
     } else if(results) {
-       
-        next(new Error("usename exist"));
+       console.log(results)
+      next(new Error('Tai khoan da ton tai'))  ;
     } else {
         next();
     }
