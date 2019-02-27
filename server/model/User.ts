@@ -17,11 +17,12 @@ const UserSchema: mongoose.Schema  = new mongoose.Schema({
   active: Boolean,
   access:Number,
   token: String,
-  
+
  
 });
 UserSchema.pre<IUser &  Document>('save', function(next) {
   // chua ma hoa pass
+
   mongoose.model('User',UserSchema).findOne({usename : this.usename}, 'usename', (err, results)=>{
     if(err) {
         next(err);

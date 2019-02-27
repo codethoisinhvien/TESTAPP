@@ -4,7 +4,6 @@ import Controller from './BaseController'
 import Auth from '../middware/Auth'
 import { async } from 'q';
 
-
 class UserController implements Controller {
   public path = '/user';
   public router = express.Router()
@@ -101,5 +100,4 @@ class UserController implements Controller {
 
 
 }
-
 export default UserController;
