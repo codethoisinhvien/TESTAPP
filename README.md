@@ -1,27 +1,24 @@
-# TESTAPP
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Chỉ chạy sever
+ npm run compile:server && npm run serve:ssr
+# Chỉ chạy client 
+ npm start
+# Chạy cả server và client
+  npm run build:ssr && npm run serve:ssr
+#Tiến độ
+  * Update ngày 28/2/2019 
+    * Back-end:
+    * Hoàn thành POST:api/login
+    
+      * [x] đăng nhập thành công
+      * [x] đăng nhập sai mật khẩu hoặc pass
+      * [ ]chưa bắt lỗi validate và ịnjection
+      * Hoàn thành GET:api/auth
+      * [x] auth
+    * Hoàn thành GET:api/user
+    
+      * [x] lấy dũ liệu user 
+      * Hoàn thành POST:api/user
+      * [ ]chưa kiểm tra dữ liệu đầu vào
+      * [x]lưu dũ liệu người dùng vào database
+      * [x] tài khoản đã tồn tại thì không được đănng kí
+  
